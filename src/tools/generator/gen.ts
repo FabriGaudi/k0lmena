@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
   });
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto('https://testautomationpractice.blogspot.com/');
+  await page.goto('https://qarmy.ar/practica/automation/index.html');
   await page.close();
 
   // ---------------------

@@ -1,53 +1,41 @@
-# @MercadoLibreSearch @Smoke
-# Feature: MercadoLibre search
-#     Scenario: User search and validate results
-#         Given User navigates to MercadoLibre page
-#         When User search for cars options
-#         Then It should show all the results according to the search
+@Smoke
+Feature: Registro en pagina de prueba QArmy
+    Scenario: Registro con falta de credenciales
+        Given El usuario se encuentra en la pagina de registro
+        When El usuario completa el campo Nombre
+        Then El resultado es correcto
 
-@test
-Feature: EVAQArmy
-    Scenario: Rellenar todos los campos del formulario
-        Given el usuario navega en la página de automatización
-        When el usuario rellena el formulario
-        Then el resultado es el esperado
+    Scenario: Rellenar el formulario en el campo apellido
+        Given El usuario completa el campo Apellido
+        When El usuario completa el campo Apellido
+        Then El resultado es correcto
 
-    Scenario: Selecionar una opcion de radio button
-        Given el usuario selecciona los buttons
-        When el usuario selecciona los buttons
-        Then el resultado es el esperado
+    Scenario: El usuario seleciona su genero
+        Given El usuario clickea el checkbox correspondiente a su genero
+        When El usuario clickea el checkbox correspondiente a su genero
+        Then El resultado es correcto
 
-    Scenario: Seleciona una opcion de la checkbox
-        Given el usuario selecciona el checkbox correcto
-        When el usuario selecciona el checkbox correcto
-        Then el resultado es el esperado
+    Scenario: Rellenar el formulario en el campo email
+        Given El usuario completa el campo Email
+        When El usuario completa el campo Email
+        Then El resultado es correcto
 
-    Scenario: Seleciona un pais de la lista
-        Given el usuario selecciona un pais de la lista
-        When el usuario selecciona un pais de la lista
-        Then el resultado es el esperado
+    Scenario: El usuario selecciona un pais
+        Given El usuario selecciona su pais de origen
+        When El usuario selecciona su pais de origen
+        Then El resultado es correcto
 
-    Scenario: Seleciona una opcion de los listboxes
-        Given el usuario selecciona en los listboxes
-        When el usuario selecciona en los listboxes
-        Then el resultado es el esperado
+    Scenario: El usuario crea su usuario
+        Given El usuario completa el campo Usuario
+        When El usuario completa el campo Usuario
+        Then El resultado es correcto
 
-    Scenario: Seleciona los date picker
-        Given el usuario selecciona los date picker
-        When el usuario selecciona los date picker
-        Then el resultado es el esperado
+    Scenario: El usuario completa el input con una contraseña
+        Given El usuario completa el campo Contraseña con una contraseña
+        When El usuario completa el campo Contraseña con una contraseña
+        Then El resultado es correcto
 
-    Scenario: Seleciona los date rage picker
-        Given el usuario selecciona los date rage picker
-        When el usuario selecciona los date rage picker
-        Then el resultado es el esperado
-
-    Scenario: Clickea el boton de submit
-        Given el usuario selecciona el boton de submit
-        When el usuario selecciona el boton de submit
-        Then el resultado es el esperado
-
-    Scenario: ascii
-        Given el resultado es el esperado
-        When endascii
-        Then el resultado es el esperado
+    Scenario: El usuario finaliza el registro
+        Given El resultado es correcto
+        When El usuario hace clic en el boton registro
+        Then El resultado es correcto
